@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<Configuration monitorInterval="30">  
+      
+  <Appenders>  
+  	<!-- 定义控制台输出 --> 
+	<Console name="Console" target="SYSTEM_OUT" follow="true">  
+		<PatternLayout pattern="%date{yyyy-MM-dd HH:mm:ss.SSS} %level [%thread][%file:%line] - %msg%n" />
+    </Console>
+     
+     <!-- 定义后台文档日志记录 -->
+    <RollingFile name="RollingFile" fileName="logs/log4j2.log" filePattern="logs/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz">  
+		<PatternLayout>  
+        	<Pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %p %c{1.} [%t] -%M-%L- %m%n</Pattern>  
+      	</PatternLayout>  
+        <Policies>
+        	<!-- 定义log文件封存的周期 -->  
+        	<TimeBasedTriggeringPolicy interval="1" modulate="true" />  
+        	<SizeBasedTriggeringPolicy size="100 KB"/>  
+        </Policies>  
+        <DefaultRolloverStrategy fileIndex="max" max="2"/>  
+    </RollingFile>  
+  </Appenders>  
+  <Loggers>
+  	<!-- 定义单个类日志记录级别 -->  
+	<Logger name="com.foo.Bar" level="error">  
+		<AppenderRef ref="Console"/>  
+    </Logger>
+    <!-- 定义除单个类外所有日志记录级别 -->  
+    <Root level="trace">
+    	<AppenderRef ref="Console"/>  
+		<AppenderRef ref="RollingFile"/>  
+    </Root>  
+  </Loggers>  
+  
+</Configuration>

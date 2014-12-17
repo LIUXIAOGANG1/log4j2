@@ -1,0 +1,13 @@
+2014-12-17 11:30:50.925} ERROR c.f.Bar [main] -doIt-12- log4j2.ERROR
+2014-12-17 11:30:50.927} ERROR c.f.MyApp [main] -main-17- log4j2.ERROR
+2014-12-17 11:30:50.928} TRACE c.f.MyApp [main] -main-19- log4j2.trace -Exiting application.
+2014-12-17 11:30:50.928} TRACE c.f.MyApp [main] -main-14- log4j2.trace -Entering application.
+2014-12-17 11:30:50.928} ERROR c.f.Bar [main] -doIt-12- log4j2.ERROR
+2014-12-17 11:30:50.928} ERROR c.f.MyApp [main] -main-17- log4j2.ERROR
+2014-12-17 11:30:50.928} TRACE c.f.MyApp [main] -main-19- log4j2.trace -Exiting application.
+2014-12-17 11:30:50.928} TRACE c.f.MyApp [main] -main-14- log4j2.trace -Entering application.
+2014-12-17 11:30:50.928} ERROR c.f.Bar [main] -doIt-12- log4j2.ERROR
+2014-12-17 11:30:50.928} ERROR c.f.MyApp [main] -main-17- log4j2.ERROR
+2014-12-17 11:30:50.928} TRACE c.f.MyApp [main] -main-19- log4j2.trace -Exiting application.
+2014-12-17 11:30:50.928} TRACE c.f.MyApp [main] -main-14- log4j2.trace -Entering application.
+2014-12-17 11:30:50.928} ERROR c.f.Bar [main] -doIt-12- log4j2.ERROR
